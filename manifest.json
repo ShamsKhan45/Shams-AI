@@ -1,0 +1,13 @@
+{
+  "background_color": "#080d18",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "Shams AI",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "Shams AI",
+  "start_url": "/",
+  "theme_color": "#080d18",
+  "description": "An AI-powered assistant for everyone. Ask questions, learn new things, and explore ideas with Shams AI.",
+  "id": "/Shams-AI/"
+}
