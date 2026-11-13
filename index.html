@@ -4,7 +4,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080d18">
+<meta name="description" content="An AI-powered assistant for everyone around the world. Ask questions, learn new things, and explore ideas with Shams AI.">
+<link rel="manifest" href="/Shams-AI/manifest.json">
 <title>Shams AI</title>
+
 <style>
 *{box-sizing:border-box}
 body{margin:0;background:#080d18;color:white;font-family:Arial,sans-serif}
@@ -19,12 +23,20 @@ button{cursor:pointer}
 .chat{display:flex;background:#111d30;border:1px solid #263b59;border-radius:16px;padding:10px;margin-top:35px}
 .chat input{flex:1;min-width:0;background:transparent;border:0;outline:0;color:white;padding:12px;font-size:16px}
 .chat button{background:#168cff;color:white;border:0;border-radius:10px;padding:12px 20px}
-#answer{margin:25px auto;text-align:left;max-width:700px;line-height:1.6;white-space:pre-wrap}
+#answer{margin:25px auto;text-align:left;max-width:700px;line-height:1.6;white-space:pre-wrap;overflow-wrap:anywhere}
 footer{margin-top:65px;color:#71809a;font-size:13px}
+@media(max-width:600px){
+main{margin:35px auto}
+h1{font-size:30px}
+.chat{padding:6px}
+.chat button{padding:10px}
+}
 </style>
 </head>
+
 <body>
 <header>✦ Shams AI</header>
+
 <main>
 <h1>Welcome to <span>Shams AI</span></h1>
 <p>Your AI assistant. Ask anything and explore your ideas.</p>
