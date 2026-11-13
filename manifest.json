@@ -1,20 +1,22 @@
-{
-  "name": "Shams AI",
-  "short_name": "Shams AI",
-  "start_url": "/Shams-AI/",
-  "display": "standalone",
-  "background_color": "#0a0a14",
-  "theme_color": "#00c87a",
-  "icons": [
-    {
-      "src": "https://cdn-icons-png.flaticon.com/512/4712/4712109.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "https://cdn-icons-png.flaticon.com/512/4712/4712109.png",
-      "sizes": "512x512",
-      "type": "image/png"
-    }
-  ]
-}
+const CACHE_NAME = 'shams-ai-v7';
+const urlsToCache = [
+  './',
+  './index.html',
+  './manifest.json',
+  './icon-192.png',
+  './icon-512.png'
+];
+
+self.addEventListener('install', event => {
+  event.waitUntil(
+    caches.open(CACHE_NAME)
+      .then(cache => cache.addAll(urlsToCache))
+  );
+});
+
+self.addEventListener('fetch', event => {
+  event.respondWith(
+    caches.match(event.request)
+      .then(response => response || fetch(event.request))
+  );
+});
